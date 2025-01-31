@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body className="bg-gray-100">
+
+    <!-- Main container -->
+    <div className="flex h-screen">
+
+        <!-- Sidebar -->
+        <aside className="w-64 bg-blue-800 text-white flex flex-col">
+            <div className="p-6">
+                <h1 className="text-3xl font-semibold">Admin Panel</h1>
+            </div>
+            <nav className="flex-1 px-4 py-6 space-y-4">
+                <a href="#" className="block py-2 px-4 rounded-lg bg-blue-700 hover:bg-blue-600">
+                    Dashboard
+                </a>
+                <a href="#" className="block py-2 px-4 rounded-lg hover:bg-blue-700">
+                    Users
+                </a>
+                <a href="#" className="block py-2 px-4 rounded-lg hover:bg-blue-700">
+                    Products
+                </a>
+                <a href="#" className="block py-2 px-4 rounded-lg hover:bg-blue-700">
+                    Orders
+                </a>
+                <a href="#" className="block py-2 px-4 rounded-lg hover:bg-blue-700">
+                    Settings
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <div className="flex-1 flex flex-col">
+            <!-- Header -->
+            <header className="bg-white shadow p-4 flex justify-between items-center">
+                <h2 className="text-xl font-semibold">Dashboard</h2>
+                <div className="flex items-center space-x-4">
+                    <span className="text-gray-600">Admin</span>
+                    <img
+                        src="https://via.placeholder.com/40"
+                        alt="User"
+                        className="rounded-full w-10 h-10"
+                    />
+                </div>
+            </header>
+
+            <!-- Content Area -->
+            <main className="p-6 bg-gray-100 flex-grow">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div className="bg-white p-4 rounded-lg shadow">
+                        <h3 className="text-lg font-semibold">Total Users</h3>
+                        <p className="text-2xl font-bold mt-2">1,234</p>
+                    </div>
+                    <div className="bg-white p-4 rounded-lg shadow">
+                        <h3 className="text-lg font-semibold">Total Orders</h3>
+                        <p className="text-2xl font-bold mt-2">567</p>
+                    </div>
+                    <div className="bg-white p-4 rounded-lg shadow">
+                        <h3 className="text-lg font-semibold">Revenue</h3>
+                        <p className="text-2xl font-bold mt-2">$12,345</p>
+                    </div>
+                </div>
+
+                <div className="mt-6">
+                    <h3 className="text-lg font-semibold mb-4">Recent Orders</h3>
+                    <div className="bg-white p-4 rounded-lg shadow overflow-x-auto">
+                        <table className="w-full text-left">
+                            <thead>
+                                <tr>
+                                    <th className="px-4 py-2">Order ID</th>
+                                    <th className="px-4 py-2">Customer</th>
+                                    <th className="px-4 py-2">Date</th>
+                                    <th className="px-4 py-2">Amount</th>
+                                    <th className="px-4 py-2">Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td className="px-4 py-2">#1234</td>
+                                    <td className="px-4 py-2">John Doe</td>
+                                    <td className="px-4 py-2">2024-09-03</td>
+                                    <td className="px-4 py-2">$200</td>
+                                    <td className="px-4 py-2 text-green-600">Completed</td>
+                                </tr>
+                                <tr>
+                                    <td className="px-4 py-2">#1235</td>
+                                    <td className="px-4 py-2">Jane Doe</td>
+                                    <td className="px-4 py-2">2024-09-03</td>
+                                    <td className="px-4 py-2">$150</td>
+                                    <td className="px-4 py-2 text-yellow-600">Pending</td>
+                                </tr>
+                                <!-- Add more rows as needed -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+</body>
+</html>
